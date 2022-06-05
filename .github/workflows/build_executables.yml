@@ -34,6 +34,7 @@ jobs:
         with:
           files: ${{ github.workspace }}/dist/Earthbone.snap
           draft: yes
+          tag_name: tag
           
   build_windows:
     # The type of runner that the job will run on
@@ -53,6 +54,5 @@ jobs:
         with:
           files: ${{ github.workspace }}/dist/Earthbone.exe
           draft: yes
-          
+          tag_name: tag
         
-      
