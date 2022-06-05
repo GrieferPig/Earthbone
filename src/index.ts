@@ -8,6 +8,3 @@ export class Earthbone {
         return this;
     }
 }
-
-const e = new Earthbone()
-e.sayHi('bruh').sayHi('there yo go').sayHi();
