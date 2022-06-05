@@ -1,12 +1,25 @@
 {
-  "name": "earthbone",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@grieferpig/earthbone",
+  "version": "0.0.1",
+  "description": "Backend of Pegasus, founder of equestria.",
+  "author": "GrieferPig <grieferpig@163.com> (https://github.com/GrieferPig/)",
+  "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrieferPig/Earthbone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GrieferPig/Earthbone/issues"
+  },
+  "homepage": "https://github.com/GrieferPig/Earthbone#readme",
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.2",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3"
+  }
 }
