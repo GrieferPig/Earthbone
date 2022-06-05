@@ -1,6 +1,6 @@
 {
   "name": "@grieferpig/earthbone",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Backend of Pegasus, founder of equestria.",
   "author": "GrieferPig <grieferpig@163.com> (https://github.com/GrieferPig/)",
   "main": "src/index.ts",
