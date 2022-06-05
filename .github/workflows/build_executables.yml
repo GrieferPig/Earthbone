@@ -29,13 +29,10 @@ jobs:
       - name: Run a multi-line script
         run: npm install&& npm run pkg
           
-      - name: Release Drafter
-        uses: release-drafter/release-drafter@v5.19.0
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          publish: no
-          prerelease: no
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          files: ${{ github.workspace }}/dist/Earthbone.snap
           
   build_windows:
     # The type of runner that the job will run on
@@ -50,13 +47,10 @@ jobs:
       - name: Run a multi-line script
         run: npm install&& npm run pkg
           
-      - name: Release Drafter
-        uses: release-drafter/release-drafter@v5.19.0
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          publish: no
-          prerelease: no
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          files: ${{ github.workspace }}/dist/Earthbone.exe
           
         
       
