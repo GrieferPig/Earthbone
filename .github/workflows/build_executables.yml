@@ -33,6 +33,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: ${{ github.workspace }}/dist/Earthbone.snap
+          draft: yes
           
   build_windows:
     # The type of runner that the job will run on
@@ -51,6 +52,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: ${{ github.workspace }}/dist/Earthbone.exe
+          draft: yes
           
         
       
