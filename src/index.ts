@@ -3,9 +3,8 @@ import * as File from "./util/File"
 import * as Grabber from "./util/Grabber"
 
 
-export {
+export{
     GetEnv,
     File,
     Grabber,
-
 }
