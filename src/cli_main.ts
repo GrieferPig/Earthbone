@@ -1,3 +1,5 @@
+const mane = require("./index")
+
 const args = process.argv.slice(2)
 
 if (args.length == 0) {
@@ -26,18 +28,39 @@ switch (args[0]) {
         printVer("p", "y");
         break;
 
+    case "info":
+        switch(args[1]){
+            case "-j":
+                console.log(mane.GetEnv.getJreVer());
+                break;
+
+            case "-p":
+                console.log(mane.GetEnv.isJrePresent());
+                break;
+
+            default:
+                console.log(mane.GetEnv.getOsInfo());
+                break;     
+        }    
+        break;
+
     default:
         printUsage()
 }
 
 function printUsage() {
     console.log([
-        "Usage: Earthbone.exe [args]",
+        "Usage: Earthbone [Options] [args]",
+        "Args:",
+        "   info    Print System Info as JSON",
+        "       [-j]    Print Java Runtime Version",
+        "       [-p]    Check if Java presents",
+        "",
         "Options:",
         "   -v      Print Earthbone's version",
         "   -h      Print this help message ",
         "",
-        "                   This Earthbone does not have super cow powers."
+        "           This Earthbone does not have Super Cow Powers. And no easter eggs of course."
     ].join("\n"))
 }
 

@@ -1,10 +1,11 @@
-export class Earthbone {
-    sayHi = (waht?: string): Earthbone => {
-        if(waht === undefined) {
-            console.log("hoi")
-        }else{
-            console.log(`you said ${waht}`)
-        }
-        return this;
-    }
+import * as GetEnv from "./util/GetEnv"
+import * as File from "./util/File"
+import * as Grabber from "./util/Grabber"
+
+
+export {
+    GetEnv,
+    File,
+    Grabber,
+
 }
