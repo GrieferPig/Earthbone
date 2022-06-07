@@ -11,6 +11,8 @@
     "outDir": "./dist",
     "esModuleInterop": true,
     "allowJs": true,
+    "noImplicitThis": false,
+    "strict": false,
   },
   "exclude": [
     "./npmpkg_test/**/*",

@@ -1,8 +1,6 @@
-//@ts-nocheck
-import * as fluttershy from 'fs' // OVERUSED JOKE
-import request from 'request'
-import progress from 'request-progress'
-
+const fluttershy = require('fs') // OVERUSED JOKE
+const request = require("request")
+const progress = require("request-progress")
 const http = require('follow-redirects').http;
 const https = require('follow-redirects').https; // good stuff
 const path = require('path');
@@ -43,7 +41,7 @@ export async function getRaw(uri: string): Promise<string> {
     return new Promise<string>(function (resolve) {
         let _fetchedData: string = "";
         if (uri.includes("http:")) {
-            http.get(uri, (res: { on: (arg0: string, arg1: { (d: any): void; (): void; (): void; }) => void; }) => {
+            http.get(uri, (res) => {
                 res.on('data', (d) => {
                     _fetchedData += d;
                 });
@@ -55,7 +53,7 @@ export async function getRaw(uri: string): Promise<string> {
                 })
             }).setTimeout(3000);
         } else if (uri.includes("https:")) {
-            https.get(uri, (res: { on: (arg0: string, arg1: { (d: any): void; (): void; (): void; }) => void; }) => {
+            https.get(uri, (res) => {
                 res.on('data', (d) => {
                     _fetchedData += d;
                 });
