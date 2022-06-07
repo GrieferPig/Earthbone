@@ -25,6 +25,9 @@
     "ts-node": "^10.8.1",
     "typescript": "^4.7.3"
   },
+  "dependencies": {
+    "follow-redirects": "^1.15.1"
+  },
   "browser": true,
   "bin": "./dist/cli_main.js",
   "pkg": {
