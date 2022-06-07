@@ -2,5 +2,4 @@
 node_modules
 dist*
 dist_pkg
-npmpkg_test
-npmpkg_test/**
+/npmpkg_test/
