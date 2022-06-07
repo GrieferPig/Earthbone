@@ -3,10 +3,11 @@
   "version": "0.0.8",
   "description": "Backend of Pegasus, founder of equestria.",
   "author": "GrieferPig <grieferpig@163.com> (https://github.com/GrieferPig/)",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "ts-node -e \"try{require('fs').rmSync('./dist',{recursive:true})}catch(e){}\" && tsc",
-    "pkg": "npm run build && pkg ./dist/cli_main.js -o ./dist_pkg/Earthbone"
+    "pkg": "npm run build && pkg ./dist/cli_main.js -o ./dist_pkg/Earthbone",
+    "prepublish": "npm run build"
   },
   "keywords": [],
   "license": "ISC",
@@ -26,7 +27,6 @@
     "ts-node": "^10.8.1",
     "typescript": "^4.7.3"
   },
-  "type": "module",
   "browser": false,
   "pkg": {
     "scripts": "dist/**/*"
@@ -35,5 +35,8 @@
     "request": "^2.88.2",
     "request-progress": "^3.0.0",
     "follow-redirects": "^1.15.1"
-  }
+  },
+  "files": [
+    "dist/**/*"
+  ]
 }
